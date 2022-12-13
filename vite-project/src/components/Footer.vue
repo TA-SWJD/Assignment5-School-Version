@@ -2,6 +2,7 @@
     <div class="footer">
         <h1>About Us</h1>
         <p>Questions? Call 1-844-542-4813</p>
+        <p>© 2022 Netflix, lnc</p>
     </div>
 </template>
 

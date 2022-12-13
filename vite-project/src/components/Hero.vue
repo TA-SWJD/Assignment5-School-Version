@@ -74,7 +74,7 @@ h1 {
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 52%;
-    padding-bottom: 0.5%;
+    padding-bottom: 1%;
     border-radius: 20px;
     color: white;
     text-align: center;
