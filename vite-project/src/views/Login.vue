@@ -8,7 +8,7 @@ const username = ref("");
 const password = ref("");
 
 const login = () => {
-    if (username.value === "Tymon" && password.value === "Assignment5") {
+    if (username.value === "tmdb" && password.value === "movies") {
         router.push("/");
     } else {
         error.value = true;
@@ -17,7 +17,6 @@ const login = () => {
 </script>
 
 <template>
-    <div class="box"></div>
     <div class="homepage">
         <img src="https://cdn-images-1.medium.com/max/1200/1*ty4NvNrGg4ReETxqU2N3Og.png" width="140" height="100">
         <p>Welcome to Netflix <br> Unlimited movies, TV shows, and more.</p>

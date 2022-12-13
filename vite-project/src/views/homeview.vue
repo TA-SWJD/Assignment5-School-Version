@@ -1,27 +1,22 @@
 <script setup>
+import HeaderVue from '../components/Header.vue';
+import HeroVue from '../components/Hero.vue';
+import FooterVue from '../components/Footer.vue';
 
 </script>
 
 <template>
-    <div class="bar">
-        <button type="button">Home</button>
-        <button type="button">Movie</button>
+    <div class="Homepage">
+        <HeaderVue />
+        <HeroVue />
+        <FooterVue />
+        <Router-View />
     </div>
+
 </template>
 
 <style scoped>
-.bar {
-    height: 50px;
-    background-color: black;
-}
-
-.bar>button {
-    color: white;
-    text-align: right;
-}
-
-.bar>button:hover {
-    color: black;
-    padding-right: 0%;
+.Homepage {
+    background-color: gray;
 }
 </style>
