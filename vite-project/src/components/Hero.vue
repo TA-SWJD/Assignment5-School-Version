@@ -16,11 +16,11 @@
             class="Intro2">
         <div class="text2">
             <h1>Netflix</h1>
-            <p>Netflix is a subscription-based streaming service that allows our members to watch <br> TV shows and
-                movies on an internet-connected device. Depending on your plan, you can <br> also download TV shows and
-                movies to your iOS, Android, or Windows 10 device and <br> watch without an internet connection.</p>
-            <p>Netflix content varies by region and may change over time. You can watch a variety of <br> award-winning
-                Netflix originals, TV shows, movies, documentaries, and more. <br> The more you watch, the better Netflix
+            <p>Netflix is a subscription-based streaming service that allows our members to watch TV shows and
+                movies on an internet-connected device. Depending on your plan, you can also download TV shows and
+                movies to your iOS, Android, or Windows 10 device and watch without an internet connection.</p>
+            <p>Netflix content varies by region and may change over time. You can watch a variety of award-winning
+                Netflix originals, TV shows, movies, documentaries, and more. The more you watch, the better Netflix
                 gets at recommending TV shows and movies.</p>
             <h1>Slogan</h1>
             <p>Always something more to see.</p>
@@ -37,18 +37,20 @@
 
 .Intro1 {
     float: left;
-    height: auto;
+    height: 400px;
     width: 50%;
 }
 
 .text1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-top: 4.5%;
-    padding-bottom: 4.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 52%;
+    padding-right: 2%;
     border-radius: 20px;
     color: white;
     text-align: center;
-    font-size: larger;
+    font-size: medium;
 }
 
 h1 {
@@ -57,23 +59,25 @@ h1 {
 
 .Intro2 {
     float: right;
-    height: auto;
+    height: 400px;
     width: 50%;
 }
 
 .section2 {
     border-radius: 20px;
     background-color: black;
-    height: auto;
+    height: 400px;
 }
 
 .text2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-top: 3.5%;
-    padding-bottom: 3.5%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 52%;
+    padding-bottom: 0.5%;
     border-radius: 20px;
     color: white;
     text-align: center;
-    font-size: larger;
+    font-size: medium;
 }
 </style>
