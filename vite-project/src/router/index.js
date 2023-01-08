@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import Login from "../views/Login.vue";
 import Home from "../views/homeview.vue";
 import Movie from "../views/movie.vue";
+import Cart from "../views/cart.vue";
+import { createApp } from "vue";
 
 const routes = [
   {
@@ -15,6 +17,10 @@ const routes = [
   {
     path: '/Movie',
     component: Movie,
+  },
+  {
+    path: '/Cart',
+    component: Cart,
   }
 ];
 

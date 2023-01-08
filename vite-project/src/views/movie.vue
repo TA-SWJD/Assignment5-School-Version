@@ -7,7 +7,9 @@ import MovieVue from '../components/movies.vue'
 <template>
 <div class="Homepage">
     <HeaderVue2 />
-    <MovieVue />
+    <Suspense>
+        <MovieVue />
+    </Suspense>
 </div>
 </template>
 

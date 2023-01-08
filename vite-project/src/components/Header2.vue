@@ -13,12 +13,14 @@ const navigate = (link) => {
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Netflix_logo.svg/2560px-Netflix_logo.svg.png"
                 width="160" height="75" />
             <img src="https://cdn-images-1.medium.com/max/1200/1*ty4NvNrGg4ReETxqU2N3Og.png" width="100" height="75" />
-            <img src='../assets/cart.png' class="cart" />
-            <router-link to="/Login" custom v-slot="{ navigate }">
-                <button @click="navigate" role="link">Login</button>
-            </router-link>
             <router-link to="/" custom v-slot="{ navigate }">
                 <button @click="navigate" role="link">Home</button>
+            </router-link>
+            <router-link to="/Movie" custom v-slot="{ navigate }">
+                <button @click="navigate" role="link">Movies</button>
+            </router-link>
+            <router-link to="/Cart" custom v-slot="{ navigate }">
+                <img src="../assets/cart.png"  @click="navigate" role="link" class="cart">
             </router-link>
         </div>
         <img src="../assets/Bar.png" class="intro">
@@ -26,12 +28,6 @@ const navigate = (link) => {
 </template>
 
 <style scoped>
-.cart {
-    padding-right: 5%;
-    float: right;
-    height: 75px;
-    width: 75px;
-}
 .main {
     margin-top: 0%;
     background-color: darkgray;
@@ -61,9 +57,17 @@ button:hover {
     background-color: darkred;
 }
 
+.cart {
+    padding-right: 5%;
+    float: right;
+    height: 75px;
+    width: 75px;
+}
+
 .intro {
     padding-top: 5px;
     height: auto;
     max-width: 100%;
 }
+
 </style>

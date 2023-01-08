@@ -19,6 +19,10 @@ export const useStore = defineStore('store', {
         return {
           id: movie.id,
           poster: movie.poster_path,
+          title: movie.title,
+          original_title: movie.original_title,
+          release_date: movie.release_date,
+          overview: movie.overview,
         }
       });
     },
@@ -37,8 +41,19 @@ export const useCart = defineStore('cart', {
       this.purchase[this.count] = movie;
       this.count ++;
     },
-    num(index) {
-      return data[index];
+    removing(movie) {
+      for (let i = 0; i < this.purchase.length; i++) {
+        if (movie == this.purchase[i]) {
+          delete this.purchase[i];
+          this.size =this.size - 1;
+          break;
+        }
+      }
+    },
+    clear(){
+      this.purchase=[];
+      this.size=0;
+      this.unique=[];
     }
   }
 })

@@ -1,42 +1,66 @@
-<!-- <script setup>
-import { ref } from 'vue';
-import axios from 'axios';
-import { useStore, useCart } from '../store/index.js';
-
-const store = useStore();
-</script>
-
-<template>
-    <div class="main">
-        <div v-for = "movie in movies">
-            <img v-if = "movie.poster" :src="'https://image.tmdb.org/t/p/w500' + movie.poster">
-            <p>#{{ movie.id }}: {{ movie.title }}</p>
-        </div>
-    </div>
-</template> -->
-
 <script setup>
 import axios from "axios";
 import { useStore, useCart } from "../store/index.js";
 import { ref } from "vue";
+import Modal from '../components/Modal.vue';
 
 const store = useStore();
 await store.getMovies();
 const movies = store.movies;
 
-</script>
+const showModal = ref(false);
+const selectedId = ref(0);
 
+const openModal = (id) => {
+  showModal.value = true;
+  selectedId.value = id;
+};
+
+const closeModal = () => {
+  showModal.value = false;
+};
+
+</script>
 
 <template>
   <div class="container">
-    <div v-for=" (movie, index) in movies" class="movies">
-        <p>
-            #{{ movie.id }}: {{ movie.title }}
-        </p>
-          <img v-if="movie.poster" :src="'https://image.tmdb.org/t/p/w500' + movie.poster" class="image"/>
+    <div v-for=" (movie, id) in movies" class="movies">
+      <p>
+        {{ movie.title }}
+      </p>
+      <img v-if="movie.poster" :src="'https://image.tmdb.org/t/p/w500' + movie.poster" class="image"
+        @click="openModal(movie)" />
     </div>
+    <Modal v-if="showModal" @toggleModal="closeModal()" :id="selectedId" />
   </div>
 </template>
 
 <style scoped>
+p {
+  color: white;
+  padding-top: 10px;
+  padding-left: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+  font-weight: bold;
+}
+
+.container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: black;
+  max-width: max-content;
+}
+
+.image {
+  width: 97.5%;
+  height: 90%;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+}
 </style>
