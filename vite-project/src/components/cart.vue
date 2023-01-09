@@ -9,7 +9,8 @@ const cart = useCart();
     <div class="purchased" v-for="purchased in cart.purchase">
         <div class="display">
             <div class="name">
-                {{ purchased.title }} {{ purchased.poster}}
+                {{ purchased.title }}
+                <img :src="'https://image.tmdb.org/t/p/w500' + purchased.poster" class="poster">
             </div>
         </div>
     </div>

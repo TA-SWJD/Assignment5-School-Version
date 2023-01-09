@@ -41,7 +41,7 @@ p {
   padding-top: 10px;
   padding-left: 5px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: large;
+  font-size: medium;
   font-weight: bold;
 }
 
@@ -57,7 +57,7 @@ p {
   width: 97.5%;
   height: 90%;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: red;
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 5px;
   font-size: 30px;
